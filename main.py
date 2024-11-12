@@ -1,7 +1,7 @@
 class Asiento():
     colores: list[str] = ["rojo","verde","amarillo","negro","blanco"]
 
-    def _init_(self, color:str, precio:int, registro:int) -> None:
+    def __init__(self, color:str, precio:int, registro:int) -> None:
         self.color: str = color
         self.precio: int = precio
         self.registro: int = registro
@@ -9,10 +9,13 @@ class Asiento():
     def cambiarColor (self, color:str) -> None:
         if color in Asiento.colores:
             self.color: str = color
-    
+
+
+
+
 class Motor():
     tiposPosibles: list[str] = ["electrico","gasolina"]
-    def _init_(self, numeroCilindros:int, tipo:str, registro:int) -> None:
+    def __init__(self, numeroCilindros:int, tipo:str, registro:int) -> None:
         self.numeroCilindros: int = numeroCilindros
         self.tipo: str = tipo
         self.registro: int = registro
@@ -23,10 +26,13 @@ class Motor():
     def asignarTipo(self, tipo:str) -> None:
         if tipo in Motor.tiposPosibles:
             self.tipo: str = tipo
-    
+
+
+
+
 class Auto():
     cantidadCreados: int = 0
-    def _init_(self, modelo:str, precio:int, asientos:list[Asiento], marca:str,
+    def __init__(self, modelo:str, precio:int, asientos:list[Asiento], marca:str,
                   motor:Motor, registro:int) -> None:
         self.modelo: str = modelo
         self.precio: int = precio
@@ -53,3 +59,4 @@ class Auto():
                     return "Las piezas no son originales"
                 else:
                     return "Auto original"
+                
