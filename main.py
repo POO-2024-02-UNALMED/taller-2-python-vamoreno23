@@ -9,19 +9,16 @@ class Asiento:
         if nuevoColor in col:
             self.color = nuevoColor 
 class Motor:
-    TIPOS_POSIBLES = ["electrico", "gasolina"]
-
-    def __init__(self, numeroCilindros: int, tipo: str, registro: int) -> None
+    def __init__(self, numeroCilindros, tipo, registro):
         self.numeroCilindros = numeroCilindros
         self.tipo = tipo
         self.registro = registro
 
-    def cambiarRegistro(self, nuevoRegistro: int) -> None:
+    def cambiarRegistro(self, nuevoRegistro):
         self.registro = nuevoRegistro
 
-    def asignarTipo(self, nuevoTipo: str) -> None:
-        //Asigna un nuevo tipo de motor 
-        if nuevoTipo in self.TIPOS_POSIBLES:
+    def asignarTipo(self, nuevoTipo):
+        if nuevoTipo in ["electrico", "gasolina"]:
             self.tipo = nuevoTipo
 
 class Auto:
